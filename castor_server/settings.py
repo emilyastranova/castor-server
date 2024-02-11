@@ -5,6 +5,8 @@ from typing import Optional
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
+from castor_lib.core.database import DatabaseConfig, CastorDatabase
+
 TEMP_DIR = Path(gettempdir())
 
 
@@ -34,6 +36,12 @@ class Settings(BaseSettings):
     # Enable uvicorn reloading
     reload: bool = False
 
+    # Database
+    db_host: str = "127.0.0.1"
+    db_port: int = 27017
+    db_user: str = "root"
+    db_password: str = "changeme"
+
     # Current environment
     environment: str = "dev"
 
@@ -54,3 +62,10 @@ class Settings(BaseSettings):
 
 
 settings = Settings()
+database_config = DatabaseConfig(
+    host=settings.db_host,
+    port=settings.db_port,
+    username=settings.db_user,
+    password=settings.db_password,
+)
+database = CastorDatabase(database_config)
