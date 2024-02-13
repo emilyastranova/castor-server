@@ -29,8 +29,8 @@ opentelemetry-exporter-otlp = "^1.18.0"
 opentelemetry-instrumentation = "^0.39b0"
 opentelemetry-instrumentation-fastapi = "^0.39b0"
 loguru = "^0.7.0"
-castor-lib = {git = "https://github.com/emilyastranova/castor-lib.git"}
 pymongo = "^4.6.1"
+castor-lib = {path = "dependencies/castor_lib"}
 
 
 [tool.poetry.dev-dependencies]

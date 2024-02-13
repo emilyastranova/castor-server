@@ -187,10 +187,8 @@ develop = false
 Click = ">=7.0"
 
 [package.source]
-type = "git"
-url = "https://github.com/emilyastranova/castor-lib.git"
-reference = "HEAD"
-resolved_reference = "8f703924456e9061ce93779be46a621eb5467cff"
+type = "directory"
+url = "dependencies/castor_lib"
 
 [[package]]
 name = "certifi"
@@ -2777,4 +2775,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "8abfc445afc23c5bacf663ea3d46ab71d2480b869498ad64c49160af61bd900d"
+content-hash = "c981a1e6c9509960db1966958435c5c79ecef8eb9c6bcfcdec76adb18269e866"

@@ -1,0 +1,3 @@
+[submodule "dependencies/castor_lib"]
+	path = dependencies/castor_lib
+	url = git@github.com:emilyastranova/castor-lib.git
